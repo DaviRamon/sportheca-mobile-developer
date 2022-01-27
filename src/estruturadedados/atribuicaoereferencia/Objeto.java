@@ -1,4 +1,4 @@
-package atribuicaoereferencia;
+package estruturadedados.atribuicaoereferencia;
 
 public class Objeto {
 

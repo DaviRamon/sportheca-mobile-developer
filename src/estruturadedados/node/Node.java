@@ -1,4 +1,4 @@
-package nos;
+package estruturadedados.node;
 
 public class Node<T> { // o <T> indica que a classe aceita valores de qualquer tipo
 

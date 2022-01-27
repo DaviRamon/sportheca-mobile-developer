@@ -1,6 +1,6 @@
-package nos;
+package estruturadedados.node;
 
-public class Main {
+public class NodeMain {
     public static void main(String[] args) {
 
         Node<String> node1 = new Node<>("Content Node 1");
