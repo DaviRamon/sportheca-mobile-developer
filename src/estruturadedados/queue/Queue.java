@@ -26,7 +26,7 @@ public class Queue {
 
             // caso haja mais nós na fila ele vai verificando elemento por elemento até um deles apontar para null, indicando que é o primeiro da fila.
             while(true){
-                if(firstNode.getRefNode() != null){ // verifica se a referência do proximo elemento que eles estã no monento é diferente de nula.
+                if(firstNode.getRefNode() != null){ // verifica se a referência do proximo elemento que ele está no momento é diferente de nula.
                     firstNode = firstNode.getRefNode(); // caso não seja null, ele verifica o elemento da frente.
 
                 }else{ // quando a referência do elemento da frente for null, ele para a verificação pois achou o primeiro elemento da fila.
