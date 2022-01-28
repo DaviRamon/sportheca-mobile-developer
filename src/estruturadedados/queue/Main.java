@@ -4,12 +4,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Queue myqueue = new Queue();
+        Queue<String> myqueue = new Queue<>(); // a fila pode conter apenas Strings
 
-        myqueue.enqueue(new Node(" First "));
-        myqueue.enqueue(new Node(" Second "));
-        myqueue.enqueue(new Node(" Third "));
-        myqueue.enqueue(new Node(" Four "));
+        myqueue.enqueue(" First ");
+        myqueue.enqueue(" Second ");
+        myqueue.enqueue(" Third " );
+        myqueue.enqueue( " 4 " ); // string
 
         System.out.println(myqueue);
 
@@ -17,7 +17,7 @@ public class Main {
 
         System.out.println(myqueue);
 
-        myqueue.enqueue(new Node(" Last ")); // adiciona o ultimo atrás do quarto nó.
+        myqueue.enqueue(" Last "); // adiciona o ultimo atrás do quarto nó.
 
         System.out.println(myqueue);
 

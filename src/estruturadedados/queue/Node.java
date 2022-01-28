@@ -9,17 +9,17 @@ package estruturadedados.queue;
   */
 
 
-public class Node {
+public class Node<T> {
 
     private Object object;  // Pode incluir todos os objetos do Java.   objectc minusculo ( conteudo do no)
-    private Node refNode;
+    private Node<T> refNode;
 
 
     // cont padrão
     public Node() {}
 
     // contrutor
-    public Node(Object object){
+    public Node(T object){
         this.refNode = null;
         this.object = object;
     }
@@ -28,7 +28,7 @@ public class Node {
         return object;
     }
 
-    public void setObject(Object object) {
+    public void setObject(T object) {
         this.object = object;
     }
 
