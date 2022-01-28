@@ -40,7 +40,26 @@ public class Stack {
 
 
 
+    // FUnção para mostrar o Nó.
+    @Override
+    public String toString() {
+        String stringReturn = "____________________\n";
+        stringReturn += "        Pilha\n";
+        stringReturn += "____________________\n";
 
+        // utiliza o Nó de referência para percorrer a pilha e dar um println
+        Node nodeAssistant  = refNodeEntraceStack;
 
+        while (true){
+            if (nodeAssistant != null){
+                stringReturn += "[No {dado = " + nodeAssistant.getDado() +"}]\n";
+                nodeAssistant = nodeAssistant.getRefNo(); // o RefNo() recebe a referÊncia do nó seguinte, imprimindo o nó seguinte da pilha. (no caso ele mesmo agora.)
 
+            } else {
+                break;
+            }
+        }
+        stringReturn += "====================\n";
+        return stringReturn;
+    }
 }

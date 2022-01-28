@@ -15,7 +15,7 @@ public class Node {
     private int dado;
     private Node refNode = null;
 
-    // contrutor
+    // construtor
     public Node(int dado) {
         this.dado = dado;
     }
