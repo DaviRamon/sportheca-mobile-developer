@@ -13,14 +13,15 @@ public class Queue {
 
 
     // metodo que adiciona um novo nó na fila
-    public void enqueue(Node newNode){
+    public void enqueue(Object newobject) {
+        Node newNode = new Node(newobject); // cria um novo nó contendo o valor passado pelo Objeto
         newNode.setRefNode(refNodeFinalEntrance); // a referência do nó que entra na fila, é a referencia de entrada da fila, ou seja, null ou o utlimo nó da fila
         refNodeFinalEntrance = newNode; // a referência de entrada da fila passa a ser o novo nó, que agora é o ultimo nó.
     }
 
 
     // metodo que verifica quem é o primeiro elemento do nó da fila
-    public Node first() {
+    public Object first() {
         if(!this.isEmpty()){ // se a fila não está vazia...
             Node firstNode = refNodeFinalEntrance; // se há somente 1 nó na fila, ele referencia ele mesmo.
 
@@ -34,7 +35,7 @@ public class Queue {
                 }
 
             }
-            return firstNode; // retorna o primeiro nó para ser deletado.
+            return firstNode.getObject(); // retorna o Objeto contido no primeiro nó para ser deletado.
 
         }
         return null; // caso esteja vazia
@@ -43,7 +44,7 @@ public class Queue {
 
 
     // metodo que verifica  e remove o primeiro elemento da fila
-    public Node dequeue() {
+    public Object dequeue() {
         if(!this.isEmpty()){ // se a fila não está vazia...
             Node firstNode = refNodeFinalEntrance; // se há somente 1 nó na fila, ele referencia ele mesmo.
             Node nodeAssistant = refNodeFinalEntrance; //  se o primeiro nó está em "i" elemento, o no assistente fica um elemento anterior. i -1
@@ -60,7 +61,7 @@ public class Queue {
                 }
 
             }
-            return firstNode; // retorna o primeiro nó para ser deletado.
+            return firstNode.getObject(); // retorna Objeto do primeiro nó para ser deletado.
         }
         return null; // caso esteja vazia
     }
@@ -95,8 +96,6 @@ public class Queue {
         } else {
             stringReturn = "null";
         }
-
-
 
         return stringReturn;
     }
