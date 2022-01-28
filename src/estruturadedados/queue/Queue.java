@@ -34,6 +34,7 @@ public class Queue {
                 }
 
             }
+            return firstNode; // retorna o primeiro nó para ser deletado.
 
         }
         return null; // caso esteja vazia
