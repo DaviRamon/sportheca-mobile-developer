@@ -7,7 +7,6 @@ public class Main {
 
         LinkedLists<String> myLinkedList = new LinkedLists<>();
 
-
         myLinkedList.add("teste 1");
         myLinkedList.add("teste 2");
         myLinkedList.add("teste 3");
