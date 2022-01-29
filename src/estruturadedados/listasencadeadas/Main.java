@@ -12,13 +12,13 @@ public class Main {
         myLinkedList.add("teste 2");
         myLinkedList.add("teste 3");
         myLinkedList.add("teste 4");
-        myLinkedList.add("teste 5");
+
 
         System.out.println(myLinkedList.get(0));
         System.out.println(myLinkedList.get(1));
         System.out.println(myLinkedList.get(2));
         System.out.println(myLinkedList.get(3));
-        System.out.println(myLinkedList.get(4));
+
 
 
         System.out.println(myLinkedList);
