@@ -47,6 +47,39 @@ public class DoublyLinkedList<T> {
     }
 
 
+    // metodo para adicionar um elemento em qualquer lugar da lista.
+    public void add(int index, T element) {
+        NoDuplo<T> assistantNode = getNode(index); // usa metodo getNode() para retornar o nó do indice.
+        NoDuplo<T> newNode = new NoDuplo<>(element);
+        newNode.setNextNode(assistantNode);
+
+        // remove o duplo engademanto para a inserção do novo nó.
+        if(newNode.getNextNode() != null){
+            newNode.setPreviousNode(assistantNode.getPreviousNode());
+            newNode.getNextNode().setPreviousNode(newNode);
+
+        } else { // caso seja null, a posição em que o indice se encontra sáo as extremidades
+            newNode.setPreviousNode(lastNode); // seta a referência para o nó anterior. que até então era o ultimo nó.
+            lastNode = newNode; //atribui o valor;
+        }
+
+        // se for entre dois elementos.
+        if(index == 0){ // se for o primeiro nó.
+            firstNode = newNode;
+
+        } else { // se estiver no meio entre dois nós.
+            newNode.getPreviousNode().setPreviousNode(newNode);
+        }
+
+
+
+
+
+
+    }
+
+
+
     private NoDuplo<T> getNode(int index){
         NoDuplo<T> assistantNode = firstNode; // o primeiro valor que o nó auxiliar assume é o valor do primeiro nó.
         for (int i =0; (i < index) && (assistantNode != null); i++ ) { // se i < indice ou no auxiliar != null para o laço.
