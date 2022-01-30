@@ -8,6 +8,33 @@ public class RingBuffer<T> {
     private Node<T> tail;
     private int sizeList;
 
+    // construtor.
+    public RingBuffer() {
+        this.tail = null;
+        this.head = null;
+        this. sizeList = 0;
+    }
+
+    // método que adiciona um valor a cauda da lista
+    public void add(T content){
+        Node<T> newNode = new Node<>(content);
+
+        // se a lista estiver vazia, adiciona um novo nó e a cabeça e a cauda tornam-se a msm referência.
+        if(this.sizeList ==0 ){
+            this.head = newNode;
+            this.tail = this.head;
+            this.head.setNextNode(tail);
+
+        } else { // adiciona o novo nó para a cauda. , e
+            newNode.setNextNode(this.tail); // aponta a referência do novo nó para a antiga cauda.
+            this.head.setNextNode(newNode); // aponta a referência da cabeça para o novo nó
+            this.tail = newNode; // a cauda aponta para o novo nó.
+        }
+        this.sizeList++;
+
+    }
+
+
     // remove um item da lista
     public void remove(int index){
         if(index >= this.sizeList){
