@@ -2,46 +2,46 @@ package estruturadedados.binarytree;
 
 public class BinNode<T extends Comparable<T>> {
 
-    private T conteudo;
-    private BinNode<T> noEsq;
-    private BinNode<T> noDir;
+    private T content;
+    private BinNode<T> leftNode;
+    private BinNode<T> rightNode;
 
-    public BinNode(T conteudo) {
-        this.conteudo = conteudo;
-        noEsq = noDir = null;
+    public BinNode(T content) {
+        this.content = content;
+        leftNode = rightNode = null;
     }
 
     public BinNode() {
     }
 
-    public T getConteudo() {
-        return conteudo;
+    public T getContent() {
+        return content;
     }
 
-    public void setConteudo(T conteudo) {
-        this.conteudo = conteudo;
+    public void setContent(T content) {
+        this.content = content;
     }
 
-    public BinNode<T> getNoEsq() {
-        return noEsq;
+    public BinNode<T> getLeftNode() {
+        return leftNode;
     }
 
-    public void setNoEsq(BinNode<T> noEsq) {
-        this.noEsq = noEsq;
+    public void setLeftNode(BinNode<T> leftNode) {
+        this.leftNode = leftNode;
     }
 
-    public BinNode<T> getNoDir() {
-        return noDir;
+    public BinNode<T> getRightNode() {
+        return rightNode;
     }
 
-    public void setNoDir(BinNode<T> noDir) {
-        this.noDir = noDir;
+    public void setRightNode(BinNode<T> rightNode) {
+        this.rightNode = rightNode;
     }
 
     @Override
     public String toString() {
         return "BinNo{" +
-                "conteudo=" + conteudo +
+                "conteudo=" + content +
                 '}';
     }
 }
