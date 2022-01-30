@@ -74,6 +74,31 @@ public class DoublyLinkedList<T> {
 
 
 
+    public void remove(int index){
+
+        // remoção do primeiro nó.
+        if(index == 0){ // se estive no primeiro nó
+            firstNode = firstNode.getNextNode(); // primeiro nó recebe a referência do nó seguinte.
+            if(firstNode != null){ // ouver mais elemento
+                firstNode.setPreviousNode(null); // antigo primeiro nó é removido.
+            }
+
+        }else{ // caso não seja o primeiro nó.
+            NoDuplo<T> assistantNode = getNode(index);
+            assistantNode.getPreviousNode().setNextNode(assistantNode.getNextNode()); // aqui acontece a troca de referências dos nós,  n0 deixa a ref do n1 e  passa para o n2.
+
+            if(assistantNode != lastNode){
+                assistantNode.getNextNode().setPreviousNode(assistantNode.getPreviousNode()); // aqui acontece a troca de referências dos nós,  n1 deixa a ref do n2 e  passa para o n0.
+
+            }else {
+
+                lastNode = assistantNode;
+            }
+        }
+        this.sizeList--; // diminui um valor no tamanho da lista
+    }
+
+
     private NoDuplo<T> getNode(int index){
         NoDuplo<T> assistantNode = firstNode; // o primeiro valor que o nó auxiliar assume é o valor do primeiro nó.
         for (int i =0; (i < index) && (assistantNode != null); i++ ) { // se i < indice ou no auxiliar != null para o laço.
@@ -87,6 +112,23 @@ public class DoublyLinkedList<T> {
     public int size(){
         return this.sizeList;
     }
+
+
+    @Override
+    public String toString() {
+        String strReturn = "";
+
+        //percorre a lista entrrando pelo primeiro nó e indo até o final, pelo seu tamanho.
+        NoDuplo<T> assistantNode = firstNode;
+        for (int i = 0; i < size(); i++){
+            strReturn += "[ No { Conteudo =" + assistantNode.getContent() +" }] ---> ";
+            assistantNode = assistantNode.getNextNode();
+
+        }
+        strReturn += "null"; // caso a lista esteja vazia ele retorna null.
+        return strReturn;
+    }
+
 
 
 }
