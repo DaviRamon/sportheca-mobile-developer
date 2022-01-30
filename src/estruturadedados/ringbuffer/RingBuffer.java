@@ -91,8 +91,20 @@ public class RingBuffer<T> {
     }
 
 
+    @Override
+    public String toString() {
+        String strReturn = "";
+        Node<T> assistantNode = this.tail; // inicia a imopressão pela cauda
+
+        for (int i = 0; i < this.size(); i++) {
+            strReturn += "[No{ Conteudo" + assistantNode.getContent() + "} ]---> ";
+            assistantNode = assistantNode.getNextNode();
+
+        }
+        strReturn += this.size() != 0 ? "( Retorna ao inicio)" : "[ Lista vazia ]";
+
+        return strReturn;
+    }
 
 
-
-
-}
+    } // fim da clas
