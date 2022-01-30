@@ -18,5 +18,13 @@ public class Main {
 
         System.out.println(myDoublyLinkedList);
 
+
+        myDoublyLinkedList.remove(3); // remove o c4
+        myDoublyLinkedList.add(3, " tanto faz"); // adiciona ao indice 3 a nova string.
+
+        System.out.println(myDoublyLinkedList);
+
+        System.out.println(myDoublyLinkedList.get(3));
+
     }
 }

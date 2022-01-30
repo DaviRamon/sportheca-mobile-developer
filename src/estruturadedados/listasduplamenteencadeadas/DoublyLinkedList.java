@@ -68,8 +68,9 @@ public class DoublyLinkedList<T> {
             firstNode = newNode;
 
         } else { // se estiver no meio entre dois nós.
-            newNode.getPreviousNode().setPreviousNode(newNode);
+            newNode.getPreviousNode().setNextNode(newNode);
         }
+        sizeList++;
     }
 
 
