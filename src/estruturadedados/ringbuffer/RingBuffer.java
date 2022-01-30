@@ -97,11 +97,11 @@ public class RingBuffer<T> {
         Node<T> assistantNode = this.tail; // inicia a imopressão pela cauda
 
         for (int i = 0; i < this.size(); i++) {
-            strReturn += "[No{ Conteudo" + assistantNode.getContent() + "} ]---> ";
+            strReturn += "[No{ Conteudo = " + assistantNode.getContent() + "} ]---> ";
             assistantNode = assistantNode.getNextNode();
 
         }
-        strReturn += this.size() != 0 ? "( Retorna ao inicio)" : "[ Lista vazia ]";
+        strReturn += this.size() != 0 ? "( Retorna ao inicio)" : "[]"; // [] = lista vazia
 
         return strReturn;
     }
