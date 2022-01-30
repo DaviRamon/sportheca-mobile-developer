@@ -47,7 +47,6 @@ public class DoublyLinkedList<T> {
     }
 
 
-
     private NoDuplo<T> getNode(int index){
         NoDuplo<T> assistantNode = firstNode; // o primeiro valor que o nó auxiliar assume é o valor do primeiro nó.
         for (int i =0; (i < index) && (assistantNode != null); i++ ) { // se i < indice ou no auxiliar != null para o laço.
