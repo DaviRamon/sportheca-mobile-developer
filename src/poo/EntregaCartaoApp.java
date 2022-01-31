@@ -1,7 +1,4 @@
-package POO;
-
-import java.util.List;
-import java.util.ArrayList;
+package poo;
 
 
 public class EntregaCartaoApp {
