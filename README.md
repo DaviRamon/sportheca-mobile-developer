@@ -1,6 +1,6 @@
 # sportheca-mobile-developer
 
-### Meu objetivo principal neste bootcamp é relembrar conceitos sobre Estrutura de Dados.
+### Meu objetivo principal neste bootcamp foi relembrar conceitos sobre Estrutura de Dados.
 
 
 Repositório para os estudos do bootcamp da Digital Innovation One. 
